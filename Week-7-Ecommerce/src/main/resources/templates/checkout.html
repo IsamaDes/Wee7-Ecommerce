@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Application</title>
+    <style>
+
+        .cart-summary {
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+
+<table>
+    <b th:text="${paid}"></b>
+    <div> Payment </div>
+    <thead><td>Product Name</td><td>Price</td><td>Pay</td></thead>
+    <tr th:each="product: ${products}">
+        <td th:text="${product.productName}"></td>
+        <td th:text="${product.price}"></td>
+        <td ><a th:href="@{/products/add-cart(cart=${product.id})}">Pay</a></td>
+    </tr>
+    <tr ><td th:text="${totalPrice}"> <td></tr>
+    <a href="/products/pay">Proceed checkout</a>
+</table>
+    <div class="content">
+        <div class="cart-summary">
+            <h2>Cart Summary</h2>
+            <!-- Display cart items here -->
+        </div>
+    </div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+categories,price,productName,quantity, ProductImg
+Leadership,23000,360-Leader,12,
+Motivation,34000,failure-to-success,23,
+Relationship,450000,Five-love-languages,10,
+Focus,456000,Maximizing flow state,16, src/main/resources/templates/360leader.png

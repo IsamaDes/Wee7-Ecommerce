@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
+
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #87CEEB; /* Light blue color */
+      padding: 15px;
+      text-align: center;
+    }
+
+    .progress-bar {
+      background-color: #f4f4f4;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .progress-indicator {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: #007bff; /* Navy blue color */
+      color: #fff;
+      border-radius: 50%;
+      line-height: 20px;
+      margin-right: 10px;
+    }
+
+    .content {
+      text-align: center;
+      padding: 20px;
+    }
+
+
+
+
+
+    .shipping-address-form,
+    .billing-address-form,
+    .payment-options,
+    .order-summary {
+      background-color: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .order-summary table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    .order-summary th, .order-summary td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .order-summary th {
+      background-color: #f4f4f4;
+    }
+
+    .order-summary tfoot td {
+      font-weight: bold;
+    }
+
+    .confirmation-section {
+      margin-top: 20px;
+    }
+
+    .confirmation-section button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .confirmation-section button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Checkout Page</h1>
+</header>
+
+<div class="progress-bar">
+  <span class="progress-indicator">1</span> Shipping
+  <span class="progress-indicator">3</span> Payment
+  <span class="progress-indicator">4</span> Delivery Confirmation
+</div>
+
+<div>
+  <b th:text="${paid}"></b>
+  <a href="/products/all">Continue Shopping</a>
+</div>
+
+
+  <div class="shipping-address-form">
+    <h2>Shipping Address</h2>
+    <form>
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+
+      <!-- Other shipping address fields -->
+
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+          <!-- Options for countries -->
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="shippingMethod">Shipping Method:</label>
+        <select id="shippingMethod" name="shippingMethod" required>
+          <!-- Options for shipping methods -->
+        </select>
+      </div>
+
+      <div class="confirmation-section">
+        <button type="button" onclick="nextStep()">Next</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Billing Address Form -->
+
+  <!-- Payment Options -->
+
+  <!-- Order Summary -->
+
+  <!-- Confirmation Section -->
+
+</div>
+
+<script>
+  function nextStep() {
+    // Implement logic to move to the next step
+  }
+</script>
+
+</body>
+</html>

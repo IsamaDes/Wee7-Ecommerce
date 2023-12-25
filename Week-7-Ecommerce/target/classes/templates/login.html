@@ -1,0 +1,113 @@
+<!--<!DOCTYPE html >-->
+<!--<html lang="en" xmlns:th="https://www.thymeleaf.org">-->
+<!--<head>-->
+<!--  <style type="text/css">-->
+<!--    input{-->
+<!--      display: block;-->
+<!--    }-->
+<!--  </style>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <title>Product Application</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--</div>-->
+
+<!--<form method="post" action="/user/login" th:object="${user}">-->
+<!--  Username:<input th:field="*{username}">-->
+<!--  Password:<input th:field="*{password}" type="password">-->
+<!--  <button type="submit">Login</button>-->
+
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+
+  <style type="text/css">
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    form {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+    }
+
+    input {
+      display: block;
+      width: calc(100% - 20px);
+      margin: 10px 0;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    label {
+      text-align: left;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .link-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<form method="post" action="/user/login" th:object="${user}">
+  Username:<input th:field="*{username}">
+  Password:<input th:field="*{password}" type="password">
+  <button type="submit">Login</button>
+
+</form>
+
+</body>
+</html>
